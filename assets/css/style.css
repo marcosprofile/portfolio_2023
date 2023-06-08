@@ -169,6 +169,11 @@ main {
   transition: all 0.2s ease;
 }
 
+.link img {
+  width: 64px;
+  height: 64px;
+}
+
 .link:hover {
   transform: scale(0.90);
 }
