@@ -407,6 +407,10 @@ footer {
     justify-content: center;
   }
 
+  .about-me img {
+    width: 64%;
+  }
+
   .links {
     width: 80%;
   }
