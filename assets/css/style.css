@@ -27,6 +27,18 @@ html {
   scroll-padding-top: 160px;
 }
 
+img, a {
+  -webkit-user-drag: none; /* Safari */
+  -khtml-user-drag: none; /* Konqueror HTML */
+  -moz-user-drag: none; /* Firefox */
+  -o-user-drag: none; /* Old versions of Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -o-user-select: none; /* Old versions of Opera */
+  user-select: none;
+}
+
 body {
   font-family: Inter, sans-serif;
   background: var(--dark);
