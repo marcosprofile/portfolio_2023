@@ -11,16 +11,18 @@
 <body>
   <!-- HEADER -->
   <header>
-    <h1>Marcos L. Ferreira</h1>
+    <a href="#home">
+      <h1>Marcos L. Ferreira</h1>
+    </a>
     <ul>
       <li>
-        <a href="#about-me">About me</a>
+        <a href="#about-me">Sobre mim</a>
       </li>
       <li>
-        <a href="#services">Services</a>
+        <a href="#services">Serviços</a>
       </li>
       <li>
-        <a href="#contact">Contact me</a>
+        <a href="#projects">Projetos</a>
       </li>
     </ul>
   </header>
@@ -29,29 +31,29 @@
   <!-- MAIN -->
   <main>
     <!-- ABOUT ME -->
-    <div class="about-me">
+    <div class="home" id="home">
       <div>
-        <h1>Hi, I am <br> Marcos L. Ferreira</h1>
+        <h1>Olá, Eu sou<br>Marcos L. Ferreira</h1>
         <span>Frontend Developer | UI/UX Design</span>
         <div class="actions">
           <a class="primary" href="assets/pdf/curriculo.pdf" download="curriculo.pdf">Download CV</a>
-          <a class="secundary" href="#contact">Learn More</a>
+          <a class="secundary" href="#contact">Saber mais</a>
         </div>
       </div>
       <img src="assets/img/capa.png" alt="">
     </div>
 
     <div class="text-info" id="about-me">
-      <h1 class="title">About me</h1>
+      <h1 class="title">Sobre mim</h1>
       <p>
-        Proficient in Figma and passionate about developing prototypes and innovative solutions
-        that truly make a difference for users, with a major motivation to create experiences
-        that make people's lives easier and more practical.
+        Profissional especialista no figma e apaixonado por desenvolver protótipos e soluções inovadoras
+        que realmente fazem a diferença para os usuários, tendo como maior motivação
+        criar experiências que tornem a vida das pessoas mais fácil e prática.
         <br>
         <br>
-        I also have knowledge of front-end and back-end, which allows me to build complete and functional
-        solutions, with the aim of always being in constant evolution and learning, seeking new technologies
-        and trends to enhance my skills and deliverables.
+        Também possuo conhecimentos de front-end e back-end, o que me permite construir soluções completas e funcionais,
+        tendo como objetivo estar sempre em constante evolução e aprendizado, buscando novas tecnologias e tendências
+        para aprimorar minhas habilidades e entregas.
       </p>
       <div class="links">
         <a href="https://www.linkedin.com/in/marcosdesigntech/" target="_blank">
@@ -83,9 +85,9 @@
 
     <!-- SERVICES -->
     <div class="services" id="services">
-      <h1 class="title">What i do</h1>
+      <h1 class="title">Serviços</h1>
       <div class="container">
-        <div class="service">
+        <div class="card">
           <img src="assets/icons/ux.svg" alt="ux design">
           <h1>
             UX
@@ -93,15 +95,15 @@
             Design
           </h1>
         </div>
-        <div class="service">
+        <div class="card">
           <img src="assets/icons/dev.svg" alt="ux design">
           <h1>
-            Web
+            Frontend
             <br>
-            Development
+            Developer
           </h1>
         </div>
-        <div class="service">
+        <div class="card">
           <img src="assets/icons/ui.svg" alt="ux design">
           <h1>
             UI
@@ -114,7 +116,7 @@
 
     <!-- SKILLS -->
     <div class="skills">
-      <h1 class="title">My Skills</h1>
+      <h1 class="title">Minhas habilidades</h1>
       <div class="list">
         <div class="skill">
           <h1 class="skill-number">
@@ -144,15 +146,28 @@
     </div>
 
     <!-- CONTACT -->
-    <div class="contact" id="contact">
-      <h1 class="title">Get in touch</h1>
-      <form action="submit">
-        <input type="text" name="text" placeholder="Full name" required autocomplete="off">
-        <input type="email" name="email" placeholder="E-mail" required autocomplete="off">
-        <input type="phone" name="phone" placeholder="Phone number (optional)" autocomplete="off">
-        <textarea name="message" id="text" cols="30" rows="10" placeholder="Message" required></textarea>
-        <button onclick="desenvolvimento()" class="primary">Submit now</button>
-      </form>
+    <div class="projects" id="projects">
+      <h1 class="title">Projetos</h1>
+      <div class="container">
+        <a title="Clique para visualizar o projeto" href="https://www.behance.net/gallery/168613697/Validacoes-(login-cadastro-e-recuperacao-de-senha)" target="_blank">
+          <div class="card">
+            <img src="assets/img/spacex.png" alt="Space X">
+          </div>
+        </a>
+        <a title="Clique para visualizar o projeto" href="https://www.behance.net/gallery/142798985/Coffee-Shop-(atualizado-29122022)" target="_blank">
+          <div class="card">
+            <img src="assets/img/coffe.png" alt="Coffe Shop">
+          </div>
+        </a>
+        <a title="Clique para visualizar o projeto" href="https://github.com/marcosprofile/job_finder" target="_blank">
+          <div class="card">
+            <img src="assets/img/jobfinder.png" alt="Job Finder">
+          </div>
+        </a>
+      </div>
+      <a href="mailto:marcos.designtech@hotmail.com" target="_blank">
+        <button class="primary">Entrar em contato</button>
+      </a>
     </div>
 
   </main>

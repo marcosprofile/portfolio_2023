@@ -34,10 +34,15 @@ body {
   margin: 100px 0 32px 0;
 }
 
-header {
+header, main, .home, .text-info,
+.services, .projects, .skills, .list,
+.skill {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+header {
+  justify-content: space-between;
   padding: 24px 240px;
   position: fixed;
   left: 0px;
@@ -73,10 +78,9 @@ ul li a:hover {
   color: var(--green);
 }
 
+
 main {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 160px;
   width: 100%;
   margin-top: 160px;
@@ -85,28 +89,29 @@ main {
 .title {
   font-weight: 600;
   font-size: 48px;
+  text-align: center;
 }
+
 
 /* ABOUT ME */
 
-.about-me {
-  display: flex;
+.home {
   justify-content: space-between;
-  align-items: center;
   gap: 32px;
   flex-wrap: wrap-reverse;
   width: 64%;
 }
 
-.about-me img {
+.home img {
   width: 50%;
 }
 
-.about-me div h1{
+.home div h1{
+  font-size: 30px;
   margin: 32px 0 8px 0;
 }
 
-.about-me div span {
+.home div span {
   color: var(--gray1);
 }
 
@@ -142,9 +147,7 @@ main {
 /* SOCIAL */
 
 .text-info {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 40px;
   width: 80%;
   text-align: center;
@@ -181,10 +184,8 @@ main {
 
 /* SERVICES */
 
-.services {
-  display: flex;
+.services, .projects {
   flex-direction: column;
-  align-items: center;
   gap: 80px;
 }
 
@@ -195,7 +196,7 @@ main {
   height: 247px;
 }
 
-.service {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,40 +210,36 @@ main {
   cursor: default;
 }
 
-.service img {
+.services .card img {
   width: max-content;
   margin-left: 50px;
 }
 
-.service h1 {
+.card h1 {
   font-weight: 600;
   color: var(--gray2);
   margin-left: 50px;
   transition: all 0.2s ease;
 }
 
-.service:hover {
+.card:hover {
   border: 1px solid var(--gray5);
   border-bottom: 5px solid var(--green);
 }
 
-.service:hover h1 {
+.card:hover h1 {
   color: var(--white);
 }
 
 /* SKILLS */
 
 .skills {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 60px;
 }
 
 .list {
-  display: flex;
   justify-content: space-evenly;
-  align-items: center;
   gap: 112px;
   height: 244px;
   padding: 0 80px;
@@ -252,9 +249,7 @@ main {
 }
 
 .skill {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 16px;
   text-transform: uppercase;
 }
@@ -271,57 +266,15 @@ main {
   color: var(--green)
 }
 
-/* CONTACT */
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 80px;
+
+/* PROJECTS */
+
+.projects {
+  margin-bottom: 160px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  width: 600px;
-}
-
-input, textarea {
-  width: 100%;
-  font-size: 16px;
-  background: none;
-  padding: 16px;
-  border: 1px solid var(--gray3);
-  border-radius: 6px;
-  color: var(--white);
-}
-
-input:-webkit-autofill {
-  background: var(--dark) !important;
-}
-
-input:-webkit-autofill:focus {
-  background: var(--dark) !important;
-}
-
-textarea, textarea::placeholder {
-  font-family: Inter, sans-serif !important;
-}
-
-textarea::placeholder {
-  color: var(--gray3);
-}
-
-textarea {
-  resize: vertical;
-  overflow: auto;
-  min-height: 42px;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border: 1px solid var(--green);
+.projects .card {
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -342,7 +295,7 @@ footer {
     width: 56%;
   }
 
-  .service {
+  .card {
     width: 300px;
   }
 }
@@ -366,10 +319,14 @@ footer {
     padding: 24px 32px;
   }
 
-  .about-me {
+  .home {
     width: 90%;
     gap: 32px;
     justify-content: center;
+  }
+  
+  .text-info p {
+    width: 84%;
   }
 
   .links {
@@ -381,19 +338,46 @@ footer {
     height: auto;
   }
 
+  .card:hover {
+    border: 1px solid var(--gray5);
+  }
+
   .list {
     flex-direction: column;
     height: auto;
-    padding: 80px;
+    padding: 72px;
+    gap: 72px;
   }
+
+  .skill-number {
+    font-size: 56px;
+  }
+
+  .skill-name {
+    font-size: 20px;
+  }
+
+  .projects {
+    margin-bottom: 0;
+  }
+
 }
 
 @media only screen and (min-width: 280px) and (max-width: 746px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 128px;
+  }
+
+  body {
+    padding: 16px;
+  }
+  
   header {
     width: -webkit-fill-available;
     flex-direction: column;
     padding: 16px 24px;
-    gap: 16px;
+    gap: 24px;
     text-align: center;
   }
 
@@ -401,18 +385,27 @@ footer {
     font-size: 26px;
   }
 
-  .about-me {
+  .home {
     width: 90%;
     gap: 32px;
     justify-content: center;
   }
 
-  .about-me img {
+  .home img {
     width: 64%;
   }
 
+  .home div h1 {
+    margin: 0 0 8px 0;
+  }
+
+  .text-info p {
+    width: 82%;
+  }
+
   .links {
-    width: 80%;
+    width: -webkit-fill-available;
+    margin: 16px 8px;
   }
 
   .container {
@@ -424,14 +417,19 @@ footer {
     width: 100%;
   }
 
-  .text-info p {
-    width: 90%;
-  }
-
   .list {
     flex-direction: column;
     height: auto;
-    padding: 80px;
+    padding: 72px;
+    gap: 72px;
+  }
+
+  .skill-number {
+    font-size: 56px;
+  }
+
+  .skill-name {
+    font-size: 20px;
   }
 
   ul {
@@ -442,9 +440,31 @@ footer {
     font-size: 14px;
   }
 
-  form {
-    width: 100%;
+  .title {
+    font-size: 32px;
   }
+
+  main {
+    margin-top: 56px;
+    gap: 80px;
+  }
+
+  .text-info, .services,.contact, .projects, .skills {
+    gap: 40px;
+  }
+
+  .container {
+    gap: 24px;
+  }
+
+  .card:hover {
+    border: 1px solid var(--gray5);
+  }
+
+  .projects {
+    margin-bottom: 0;
+  }
+
 }
 
 @media only screen and (max-width: 280px) {
