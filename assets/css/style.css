@@ -13,13 +13,24 @@
 
   /* LIGHT */
   --white: #FFFFFF;
+  --white-300: #d6ced6; 
 
   /* DARK */
   --dark: #121214;
 
+  /* BLUE */
+  --blue: #00D8FF;
+
+  /* YELLOW */
+  --yellow: #F0DB4F;
+
+  /* PURPLE */
+  --purple: #A259FF;
+
   /* GREEN */
   --green: #27AE60;
   --green-hover: #229653;
+  --green-200: #0ACF83;
 }
 
 html {
@@ -57,6 +68,7 @@ header {
   justify-content: space-between;
   padding: 24px 240px;
   position: fixed;
+  z-index: 2;
   left: 0px;
   top: 0px;
   width: -webkit-fill-available;
@@ -227,7 +239,7 @@ main {
   margin-left: 50px;
 }
 
-.card h1 {
+.card h2 {
   font-weight: 600;
   color: var(--gray2);
   margin-left: 50px;
@@ -239,7 +251,7 @@ main {
   border-bottom: 5px solid var(--green);
 }
 
-.card:hover h1 {
+.card:hover h2 {
   color: var(--white);
 }
 
@@ -248,6 +260,11 @@ main {
 .skills {
   flex-direction: column;
   gap: 60px;
+}
+
+.skill {
+  flex-direction: column;
+  gap: 16px;
 }
 
 .list {
@@ -260,22 +277,51 @@ main {
   border-radius: 12px;
 }
 
-.skill {
-  flex-direction: column;
-  gap: 16px;
-  text-transform: uppercase;
+.img-skill-width {
+  width: 120px;
 }
 
-.skill-number {
-  font-size: 72px;
-  font-weight: 600;
-  color: var(--gray3);
+.img-skill-height {
+  height: 120px;
 }
 
 .skill-name {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--green)
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white-300);
+}
+
+.bar-bg, .bar {
+  width: 100px;
+  height: 8px;
+  border-radius: 8px;
+  background: var(--gray2);
+}
+
+.bar {
+  width: 100px;
+  background: var(--green);
+}
+
+.basico {
+  width: 30px;
+  background: var(--blue);
+}
+
+.medio {
+  width: 50px;
+  background: var(--yellow);
+}
+
+.avancado {
+  width: 80px;
+  background: var(--green-200);
+}
+
+.especialista {
+  width: 100px;
+  background: var(--purple);
 }
 
 
