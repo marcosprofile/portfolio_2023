@@ -178,7 +178,7 @@ main {
 }
 
 .text-info p {
-  width: 35%;
+  width: 800px;
   line-height: 165%;
 }
 
@@ -384,7 +384,7 @@ footer {
   }
   
   .text-info p {
-    width: 84%;
+    width: 600px;
   }
 
   .links {
