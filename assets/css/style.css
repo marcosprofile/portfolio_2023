@@ -178,7 +178,7 @@ main {
 }
 
 .text-info p {
-  width: 800px;
+  width: 616px;
   line-height: 165%;
 }
 
@@ -214,9 +214,9 @@ main {
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
   height: 247px;
 }
 
@@ -274,10 +274,11 @@ main {
 }
 
 .list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   justify-content: space-evenly;
-  gap: 112px;
+  width: 1152px;
   height: 244px;
-  padding: 0 80px;
   background: var(--gray5);
   border: 1px solid var(--gray3);
   border-radius: 12px;
@@ -354,22 +355,20 @@ footer {
   header {
     padding: 24px 80px;
   }
-
-  .text-info p {
-    width: 600px;
-  }
 }
 
 @media only screen and (min-width: 1043px) and (max-width: 1200px) {
   .container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     height: auto;
   }
   
   .list {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    width: 352px;
     height: auto;
-    padding: 80px;
+    padding: 48px 0;
   }
 }
 
@@ -394,7 +393,7 @@ footer {
   }
 
   .container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     height: auto;
   }
 
@@ -403,10 +402,12 @@ footer {
   }
 
   .list {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    width: 352px;
+    padding: 48px 0;
     height: auto;
-    padding: 72px;
-    gap: 72px;
+    gap: 48px;
   }
 
   .skill-number {
@@ -460,7 +461,7 @@ footer {
   }
 
   .text-info p {
-    width: 320px;
+    width: 100%;
   }
 
   .links {
@@ -469,7 +470,7 @@ footer {
   }
 
   .container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     height: auto;
   }
 
@@ -478,10 +479,12 @@ footer {
   }
 
   .list {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    width: 352px;
     height: auto;
-    padding: 72px;
-    gap: 72px;
+    padding: 48px 0;
+    gap: 48px;
   }
 
   .skill-number {
