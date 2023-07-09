@@ -235,6 +235,11 @@ main {
   cursor: default;
 }
 
+.img-project {
+  height: inherit;
+  object-fit: cover;
+}
+
 .services .card img {
   width: max-content;
   margin-left: 50px;
@@ -352,10 +357,6 @@ footer {
 
   .text-info p {
     width: 600px;
-  }
-
-  .card {
-    width: 300px;
   }
 }
 
