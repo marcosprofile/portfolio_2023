@@ -227,6 +227,7 @@ main {
   gap: 16px;
   width: 350px;
   height: 240px;
+  overflow: hidden;
   border-radius: 12px;
   background: var(--gray5);
   border: 1px solid var(--gray3);
